@@ -1,13 +1,36 @@
 package LinkedList;
-//Import the LinkedList class
-import java.util.LinkedList;
-public class Linked_List {
-	public static void main(String[] args)
+public class Linked_List
+{
+	Node head;
+	//insert operation
+	public void insert(int data)
 	{
-	    LinkedList<Integer> listOfNumbers = new LinkedList<Integer>();
-	    listOfNumbers.add(56);
-	    listOfNumbers.add(30);
-	    listOfNumbers.add(70);
-	    System.out.println(listOfNumbers);
+		Node node = new Node();
+		node.data = data;
+		node.next = null;
+		if(head==null)
+		{
+			head = node;
+		}
+		else
+		{
+			Node n = head;
+			while(n.next!=null)
+			{
+				n = n.next;
+			}
+			n.next = node;
+		}	
+	}
+	//to print the list
+	public void show()
+	{
+		Node node = head;
+		while(node.next!=null)
+		{
+			System.out.print(node.data+"->");
+			node = node.next;
+		}
+		System.out.println(node.data);
 	}
 }
