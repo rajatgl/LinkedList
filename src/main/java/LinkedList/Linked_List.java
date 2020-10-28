@@ -3,31 +3,37 @@ public class Linked_List
 {
 	Node head;
 	//insert operation
-	public void insert(int data)
+	public void append(int...data)
 	{
-		Node node = new Node();
-		node.data = data;
-		node.next = null;
-		if(head==null)
+		for (int datum : data)
 		{
+			Node node = new Node();
+			node.data = datum;
+			node.next = null;
+			if(head==null)
+			{
+				head = node;
+			}
+			else
+			{
+				Node n = head;
+				while(n.next!=null)
+				{
+					n = n.next;
+				}
+				n.next = node;
+			}
+		}
+	}
+	public void add(int...data)
+	{
+		for(int datum : data)
+		{
+			Node node = new Node();
+			node.data = datum;
+			node.next = head;
 			head = node;
 		}
-		else
-		{
-			Node n = head;
-			while(n.next!=null)
-			{
-				n = n.next;
-			}
-			n.next = node;
-		}	
-	}
-	public void insertAtStart(int data)
-	{
-		Node node = new Node();
-		node.data = data;
-		node.next = head;
-		head = node;
 	}
 	
 	//to print the list

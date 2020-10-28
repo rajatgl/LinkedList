@@ -4,9 +4,9 @@ public class Runner
 	public static void main(String args[])
 	{
 		Linked_List list = new Linked_List();
-		list.insert(70);
-		list.insertAtStart(30);
-		list.insertAtStart(56);
+		list.append(70,50,30);
+		list.add(30,15,14);
+		list.add(56);
 		list.show();
 	}
 }
