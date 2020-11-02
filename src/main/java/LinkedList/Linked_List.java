@@ -2,7 +2,7 @@ package LinkedList;
 public class Linked_List
 {
 	Node head;
-	//insert operation
+	//insert operations
 	public void append(int...data)
 	{
 		for (int datum : data)
@@ -25,6 +25,7 @@ public class Linked_List
 			}
 		}
 	}
+	
 	public void add(int...data)
 	{
 		for(int datum : data)
@@ -36,6 +37,21 @@ public class Linked_List
 		}
 	}
 	
+	public void insert(int datum, int position) 
+	{
+		Node node = new Node();
+		node.data = datum;
+		node.next = null;
+		Node n = head;
+		if(position==0)
+			add(datum);
+		for(int i=0; i<position-1; i++)
+		{
+			n = n.next;
+		}
+		node.next = n.next;
+		n.next = node;
+	}
 	//to print the list
 	public void show()
 	{
