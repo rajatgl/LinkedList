@@ -58,9 +58,19 @@ public class Linked_List
 	
 	//Delete Operations
 	public void deleteFirst()
-	{
+	{		
 		head = head.next;
+	}	
+	public void deleteLast()
+	{
+		Node second_last = head;
+		while(second_last.next.next != null)
+		{
+			second_last = second_last.next;
+		}
+		second_last.next = null;		
 	}
+	
 	
 	//to print the list
 	public void show()

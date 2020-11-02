@@ -6,7 +6,7 @@ public class Runner
 		Linked_List list = new Linked_List();
 		list.append(56,70);
 		list.insert(30,1);
-		list.deleteFirst();
+		list.deleteLast();
 		list.show();
 	}
 }
