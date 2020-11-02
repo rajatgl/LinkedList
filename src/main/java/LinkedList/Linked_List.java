@@ -55,6 +55,13 @@ public class Linked_List
 			n.next = node;
 		}
 	}
+	
+	//Delete Operations
+	public void deleteFirst()
+	{
+		head = head.next;
+	}
+	
 	//to print the list
 	public void show()
 	{
