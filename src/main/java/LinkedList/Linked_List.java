@@ -45,12 +45,15 @@ public class Linked_List
 		Node n = head;
 		if(position==0)
 			add(datum);
-		for(int i=0; i<position-1; i++)
+		else
 		{
-			n = n.next;
+			for(int i=0; i<position-1; i++)
+			{
+				n = n.next;
+			}
+			node.next = n.next;
+			n.next = node;
 		}
-		node.next = n.next;
-		n.next = node;
 	}
 	//to print the list
 	public void show()
